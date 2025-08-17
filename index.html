@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Pradyumna Acharya Marimganti</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      transition: all 0.5s ease;
+    }
+
+    /* Resume button */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .resume-btn:hover {
+      background: linear-gradient(135deg, #feb47b, #ff7e5f);
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .skills-intro {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 15px 0 25px 0;
+      color: #11da3d;
+      text-shadow: 0 0 8px rgba(66, 230, 25, 0.3);
+      animation: pulseGlow 2.5s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 5px rgba(255,209,127,0.7); }
+      50% { text-shadow: 0 0 20px rgba(255,209,127,1); }
+      100% { text-shadow: 0 0 5px rgba(255,209,127,0.7); }
+    }
+
+    .bar {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .bar span {
+      display: block;
+      height: 10px;
+      background: linear-gradient(90deg, #ffd17f, #ff7e5f);
+    }
+
+    /* Dark mode styles (always applied) */
+    body.dark-mode {
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: #ddd;
+    }
+    .dark-mode header,
+    .dark-mode footer { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+    .dark-mode section { background: rgba(50,50,50,0.85); }
+    .dark-mode h2 { color: #ffd17f; }
+    .dark-mode ul li {
+      background: rgba(70, 70, 70, 0.85);
+      border-left: 6px solid #ffb347;
+      color: #f0f0f0;
+    }
+    .dark-mode a { color: #ffd17f; }
+    .dark-mode a:hover { color: #fff; }
+
+    header {
+      color: #fff;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    header h1 { font-size: 2.2rem; }
+    nav { margin-top: 15px; }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, color 0.3s;
+    }
+    nav a:hover { color: #ffd17f; transform: scale(1.1); }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 50px auto; /* pushes sections a bit down */
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    .about img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+      box-shadow: 0 0 20px rgba(255, 209, 127, 0.3);
+    }
+    .about img:hover { transform: scale(1.1); }
+
+    ul li {
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    ul li:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+    a { text-decoration: none; transition: color 0.3s; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <!-- Header -->
+  <header>
+    <h1>Pradyumna Acharya Marimganti</h1>
+    <p>Welcome to my website</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me✍:</h2>
+    <img src="my_picture.jpeg" alt="Your Photo">
+    <p>Hello! My name is Pradyumna Acharya Marimganti. I am a motivated and detail-oriented Computer Science student with strong skills in Python, Java, and Artificial Intelligence. Seeking an opportunity to apply my academic knowledge and gain hands-on experience in programming, entry-level Python and Java projects. Eager to contribute my skills wherever I can, while also developing my expertise in Artificial Intelligence. This website is a little corner of the internet where I share who I am and what I do.</p>
+    
+    <!-- Resume Download Button -->
+    <a href="PradyumnaMarimgantiResume.pdf" download class="resume-btn">📄 Download Resume</a>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills📝:</h2>
+    <p class="skills-intro">Always open and excited to learning something new 🚀</p>
+
+    <div class="skill">
+      <p>Python</p>
+      <div class="bar"><span style="width: 80%"></span></div>
+    </div>
+    <div class="skill">
+      <p>Java</p>
+      <div class="bar"><span style="width: 60%"></span></div>
+    </div>
+    <div class="skill">
+      <p>Artificial Intelligence</p>
+      <div class="bar"><span style="width: 10%"></span></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects💻:</h2>
+    <p>I have done various interesting projects, some of the highlights are:</p>
+    <ul>
+      <li><strong>Project 1: Jarvis Voice Assistant 🤖</strong>
+        <p>Developed a Jarvis Voice Assistant using Python with speech recognition and text-to-speech capabilities...</p>
+        <a href="https://github.com/PradyumnaAM/JarvisVoiceAssistant" target="_blank">github.com/JarvisVoiceAssistant</a>
+      </li>
+      <li><strong>Project 2: Turtle Crossing Game (Capstone Project) 🐢</strong>
+        <p>For my capstone project, I developed a side-scrolling obstacle avoidance game...</p>
+        <a href="https://github.com/PradyumnaAM/TurtleCrossingGame/tree/main" target="_blank">github.com/TurtleCrossingGame</a>
+      </li>
+      <li><strong>Project 3: Pomodoro Timer ⏱️</strong>
+        <p>Developed an interactive Pomodoro Timer in Python...</p>
+        <a href="https://github.com/PradyumnaAM/Pomodoro" target="_blank">github.com/Pomodoro</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me📩:</h2>
+    <p>Email: <a href="mailto:pradyumnaacharyamarimganti@email.com">pradyumnaacharyamarimganti@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/PradyumnaAM" target="_blank">github.com/Pradyumna_AM</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/pradyumna-marimganti-34063b1a6/" target="_blank">linkedin.com/in/pradyumna-marimganti</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pradyumna Acharya Marimganti. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Prevent browser from remembering scroll
+    window.history.scrollRestoration = "manual";
+    window.addEventListener("load", () => {
+      window.scrollTo(0, 0);
+    });
+
+    // Animate sections on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) { entry.target.classList.add("visible"); }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
